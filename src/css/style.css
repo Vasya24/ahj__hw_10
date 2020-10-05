@@ -10,38 +10,52 @@ form {
     border: 1px solid red;
 }
 
+.chat {
+    position: relative;
+    left: 40%;
+    top: 3%
+}
+
+.chat_messages {
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    width: 303px;
+    height: fit-content;
+    min-height: 350px;
+    background-color: aquamarine;
+}
+
+.date_time_box {
+    color: #ffff;
+    font-size: 0.6rem;
+}
+
+.message_box {
+    display: flex;
+    padding: .175rem .25rem;
+    word-wrap: wrap;
+    max-width: 245px;
+    background-color: #A40000;
+    border-radius: .25rem;
+    margin-bottom: 1%;
+}
+
+.msg_txt, .msg_geo {
+    color: #ffff;
+    font-size: .85rem;
+    max-width: 80%
+}
+
+
+
 .input {
     display: inline-block;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
-    border: 1px solid #ced4da;
+    border: 3px solid #ced4da;
     border-radius: .25rem;
-}
-
-.btn {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    border: 1px solid #ced4da;
-}
-
-.form-control {
-    position: relative;
-    margin-bottom: 5px;
-}
-
-.form-error {
-    position: absolute;
-    padding: 5px 10px;
-    width: 200px;
-    background: #fff;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    width: 300px;
 }
