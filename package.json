@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint .",
+    "fix": "eslint . --fix",
     "test": "jest --passWithNoTests",
     "coverage": "jest --coverage",
     "doc": "jsdoc -c jsdoc.conf.json",
