@@ -14,5 +14,17 @@
         <div class="chat_messages"></div>
         <div class="input_field"><input type="text" class="input" required placeholder="Введи текст и ткни ентер"></div>
     </div>
+
+    <div class="modal no_geo">
+        <form class="no_geo_form">
+        <p class="no_geo_header">Что-то пошло не так!</p>
+        <p class="no_geo_text">Я что-то тебя найти не могу... Говори сам, где тебя искать! Спрятался он...</p>
+        <input type="text" placeholder="Широта и долгота через запятую" required class="input geo" pattern="\s?\d{1,2}.\d{1,14}.\s?\d{1,2}.\d{1,14}\s?">
+        <div class="inputs_box">
+        <input type="reset" value="Не скажу!">
+        <input type="submit" value="Я тут" class="geo_submit">
+        </div>
+        </form>
+    </div>
 </body>
 </html>

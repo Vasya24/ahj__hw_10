@@ -2,9 +2,6 @@ p {
     color: black;
 }
 
-form {
-    margin-top: 200px;
-}
 
 :invalid {
     border: 1px solid red;
@@ -47,8 +44,6 @@ form {
     max-width: 80%
 }
 
-
-
 .input {
     display: inline-block;
     padding: .375rem .75rem;
@@ -58,4 +53,16 @@ form {
     border: 3px solid #ced4da;
     border-radius: .25rem;
     width: 300px;
+}
+
+.modal {
+    position: absolute;
+    padding: .375rem .75rem;
+    background-color: bisque;
+    top: -200px;
+    left: 500px;
+}
+
+.modal.active {
+    top: 200px;
 }
