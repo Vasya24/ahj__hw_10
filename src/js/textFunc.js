@@ -1,4 +1,5 @@
-export default function text() {
+/* eslint-disable */
+export default function textFunc() {
   const chatMsgs = document.querySelector('.chat_messages');
   const input = document.querySelector('.input');
   const date = new Date();

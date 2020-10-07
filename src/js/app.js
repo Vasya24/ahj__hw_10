@@ -1,7 +1,7 @@
-import text from './text';
-import audio from './audio';
-import video from './video';
+import textFunc from './textFunc';
+import audioFunc from './audioFunc';
+import videoFunc from './videoFunc';
 
-text();
-document.querySelector('.record').addEventListener('click', audio);
-document.querySelector('.video').addEventListener('click', video);
+textFunc();
+document.querySelector('.record').addEventListener('click', audioFunc);
+document.querySelector('.video').addEventListener('click', videoFunc);
