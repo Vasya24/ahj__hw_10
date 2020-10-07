@@ -6,7 +6,9 @@ export default async function audio() {
   if (!navigator.mediaDevices) {
     return;
   } try {
-    const audio = document.getElementById('audio');
+    const audio = document.createElement('audio');
+    audio.controls = true;
+    
     const stream = await navigator.mediaDevices.getUserMedia({
       audio: true,
       video: false,
@@ -37,6 +39,8 @@ export default async function audio() {
     document.querySelector('.record_duration').classList.add('active');
     document.querySelector('.cancel_record').classList.add('active');
 
+    document.querySelector('.record_duration').innerHTML = `${date.setMinutes(0)}:${date.setSeconds(0)}`
+
     document.querySelector('.done_record').addEventListener('click', () => {
       recorder.stop();
       if (navigator.geolocation) {
@@ -48,7 +52,6 @@ export default async function audio() {
             chatMsgs.insertAdjacentHTML('afterbegin', `
     <div class="message_box">
     <div class="audio_geo_box">
-    <audio controls id="audio"></audio>
     <p class="msg_geo">${latitude}, ${longitude}, ${accuracy}</p>
     </div>
     <div class="date_time_box">
@@ -56,6 +59,7 @@ export default async function audio() {
     </div>
     </div>
 `);
+document.querySelector('.audio_geo_box').appendChild(audio)
             document.querySelector('.record').classList.add('active');
             document.querySelector('.done_record').classList.remove('active');
             document.querySelector('.record_duration').classList.remove('active');
