@@ -60,10 +60,39 @@ export default async function audio() {
             document.querySelector('.done_record').classList.remove('active');
             document.querySelector('.record_duration').classList.remove('active');
             document.querySelector('.cancel_record').classList.remove('active');
-          },
+
+          }, (error) => {
+            console.log(error);
+            modalGeo.classList.add('active');
+            const geoForm = document.querySelector('.no_geo_form');
+            const geoInput = document.querySelector('.geo');
+            geoForm.addEventListener('submit', (e) => {
+              e.preventDefault();
+              chatMsgs.insertAdjacentHTML('afterbegin', `
+            <div class="message_box">
+            <div class="text_geo_box">
+            <audio controls id="audio"></audio>
+            <p class="msg_geo">${geoInput.value}</p>
+            </div>
+            <div class="date_time_box">
+            ${date.getDate()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}
+            </div>
+            </div>
+            `);
+              modalGeo.classList.remove('active');
+            });
+
+          }
         );
       }
     });
+document.querySelector('.cancel_record').addEventListener('click', () => {
+    recorder.stop();
+    document.querySelector('.record').classList.add('active');
+    document.querySelector('.done_record').classList.remove('active');
+    document.querySelector('.record_duration').classList.remove('active');
+    document.querySelector('.cancel_record').classList.remove('active');
+})
   } catch (err) {
     console.log(err);
   }
