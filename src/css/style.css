@@ -75,26 +75,34 @@ p {
 
 .record {
     position: relative;
-    right: 30px;
+    right: 55px;
     cursor: pointer;
 }
+
+.video {
+    position: relative;
+    right: 50px;
+    cursor: pointer;
+}
+
+
 
 .done_record {
     position: relative;
     cursor: pointer;
-    right: 60px;
+    right: 65px;
 }
 
 .record_duration {
     position: relative;
     cursor: pointer;
-    right: 50px;
+    right: 60px;
 }
 
 .cancel_record {
     position: relative;
     cursor: pointer;
-    right: 40px;
+    right: 50px;
 }
 
 .media_icon {
@@ -108,4 +116,8 @@ p {
 audio {
     max-width: 200px;
     height: 17px;
+}
+
+video {
+    max-width: 200px;
 }

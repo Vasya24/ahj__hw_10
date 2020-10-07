@@ -38,8 +38,13 @@ export default async function audio() {
     document.querySelector('.done_record').classList.add('active');
     document.querySelector('.record_duration').classList.add('active');
     document.querySelector('.cancel_record').classList.add('active');
+    date.setMinutes(0);
+    date.setSeconds(0);
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
 
-    document.querySelector('.record_duration').innerHTML = `${date.setMinutes(0)}:${date.setSeconds(0)}`
+    
+    document.querySelector('.record_duration').innerHTML = `${minutes}:${seconds}`
 
     document.querySelector('.done_record').addEventListener('click', () => {
       recorder.stop();
@@ -75,7 +80,6 @@ document.querySelector('.audio_geo_box').appendChild(audio)
               chatMsgs.insertAdjacentHTML('afterbegin', `
             <div class="message_box">
             <div class="text_geo_box">
-            <audio controls id="audio"></audio>
             <p class="msg_geo">${geoInput.value}</p>
             </div>
             <div class="date_time_box">
@@ -84,6 +88,7 @@ document.querySelector('.audio_geo_box').appendChild(audio)
             </div>
             `);
               modalGeo.classList.remove('active');
+              document.querySelector('.audio_geo_box').appendChild(audio);
             });
 
           }
