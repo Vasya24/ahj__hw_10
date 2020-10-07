@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     port: 4242,
-    host: '127.0.0.1'
+    host: '127.0.0.1',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

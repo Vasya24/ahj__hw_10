@@ -26,6 +26,7 @@ p {
 .date_time_box {
     color: #ffff;
     font-size: 0.6rem;
+    padding: 5%;
 }
 
 .message_box {
@@ -38,10 +39,15 @@ p {
     margin-bottom: 1%;
 }
 
-.msg_txt, .msg_geo {
+.msg_txt {
     color: #ffff;
     font-size: .85rem;
     max-width: 80%
+}
+
+.msg_geo {
+    color: #ffff;
+    font-size: .5rem;
 }
 
 .input {
@@ -65,4 +71,41 @@ p {
 
 .modal.active {
     top: 200px;
+}
+
+.record {
+    position: relative;
+    right: 30px;
+    cursor: pointer;
+}
+
+.done_record {
+    position: relative;
+    cursor: pointer;
+    right: 60px;
+}
+
+.record_duration {
+    position: relative;
+    cursor: pointer;
+    right: 50px;
+}
+
+.cancel_record {
+    position: relative;
+    cursor: pointer;
+    right: 40px;
+}
+
+.media_icon {
+    display: none;
+}
+
+.media_icon.active {
+  display: inline-block;
+}
+
+audio {
+    max-width: 200px;
+    height: 17px;
 }

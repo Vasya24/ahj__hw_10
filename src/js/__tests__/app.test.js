@@ -1,3 +1,3 @@
-test('test stub - don\'t do stuff like that - only for demo', () => {
+test('Coords text test', () => {
 
 });
